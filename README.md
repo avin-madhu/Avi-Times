@@ -1,4 +1,4 @@
-# The Avi Times
+# Avi Times 
 
 ## Description
 This is a React Native news app that allows users to stay updated with the latest news articles.
