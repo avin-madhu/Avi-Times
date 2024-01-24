@@ -3,8 +3,10 @@
 ## Description
 This is a React Native news app that allows users to stay updated with the latest news articles.
 ### Preview
-![image]()
-![image1]()
+<div align="center">
+ <img src="screenshot1.jpg" alt="image" style="max-width: 100px; height: 500px;">
+<img src="screenshot2.jpg" alt="image" style="max-width: 100px; height: 500px;">  
+</div>
 
 
 ## Dependencies
