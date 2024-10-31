@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
 import {View, Text, StyleSheet, Image, TouchableOpacity, FlatList, Linking} from "react-native"
-import {useNavigation} from '@react-navigation/native';
 
 export default function MyNewsCard({query}){
     const [currentnewsdata, setnewsdata] = useState();
+    
+    const today = new Date()
+    console.log(today.getDate())
+    
+    var year = today.getFullYear()
+    var month = String(today.getMonth() + 1).padStart(2,'0')
+    var day = String(today.getDate() - 10).padStart(2,'0')
+
+    var formatted_date = `${year}-${month}-${day}`
+    console.log(formatted_date)
 
     const mynewsdata = async()=>{
         try{
-            const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&from=2023-12-23&sortBy=publishedAt&apiKey=96ae9245f5604702b14e33f34b15936c`);
+            const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&from=${formatted_date}&sortBy=publishedAt&apiKey=96ae9245f5604702b14e33f34b15936c`);
             const MyNewsData = await response.json();
             setnewsdata(MyNewsData.articles)
         }

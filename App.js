@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput} from 'react-native';
 import MyNewsCard from './components/mynewscard';
 import { Feather } from '@expo/vector-icons';
-import {useNavigation} from '@react-navigation/native';
+
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
